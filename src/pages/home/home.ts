@@ -16,7 +16,7 @@ export class HomePage {
   }
 
   newMailNotification(): void {
-  this.tts.speak('Hello World')
+  this.tts.speak('You have received a new email!')
     .then(() => console.log('Success'))
     .catch((reason: any) => console.log(reason));
   }
