@@ -1,5 +1,7 @@
 {
   "name": "MyIonicBlank",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
