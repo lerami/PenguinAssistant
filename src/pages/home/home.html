@@ -1,12 +1,22 @@
 <ion-card>
-  <img src="assets/imgs/penguin.jpg"/>
+  <img src="assets/imgs/penguin.jpg" />
   <ion-card-content>
     <ion-card-title>
       Welcome to PenguinAssistant !
-      </ion-card-title>
+    </ion-card-title>
     <p>
-      The email assistant that glides with your emails ! Reading, sending, contact management and so on, 
-      emailing will be much more easy now !
+      The email assistant that glides with your emails ! Reading, sending, contact management and so on, emailing will be much
+      more easy now !
     </p>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-content>
+    <ion-card-title>
+      Your emails
+    </ion-card-title>
+    <div *ngIf="newEmail">
+        <ion-item>New mail from {{newEmail.sender}}</ion-item>
+    </div>
   </ion-card-content>
 </ion-card>
