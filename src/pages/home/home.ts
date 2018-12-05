@@ -9,24 +9,24 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  newEmail;
+  userDelivery;
 
   constructor(public navCtrl: NavController, private tts: TextToSpeech) {
 
   }
   
 
-  newMailNotification(emailDetail): void {
-  this.tts.speak(`You have received a new mail from ${emailDetail.sender} : ${emailDetail.body}`)
+  deliverMsgToUser(userDelivery): void {
+  this.tts.speak(`${userDelivery.msg} ${userDelivery.cmd}`)
     .then(() => console.log('Success'))
     .catch((reason: any) => console.log(reason));
   }
 
   ionViewDidLoad() {
-    let emailRef: firebase.database.Reference = firebase.database().ref(`/usr/email/`);
-    emailRef.on('value', snapshot => {
-      this.newEmail = snapshot.val();
-      this.newMailNotification(this.newEmail);
+    let usr: firebase.database.Reference = firebase.database().ref(`/usr/`);
+    usr.on('value', snapshot => {
+      this.userDelivery = snapshot.val();
+      this.deliverMsgToUser(this.userDelivery);
     });
   }
 
