@@ -11,11 +11,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
 export class HomePage {
   userDelivery;
 
-  constructor(public navCtrl: NavController, private tts: TextToSpeech) {
-
-  }
+  constructor(public navCtrl: NavController, private tts: TextToSpeech) { }
   
-
   deliverMsgToUser(userDelivery): void {
   this.tts.speak(`${userDelivery.msg} ${userDelivery.cmd}`)
     .then(() => console.log('Success'))
