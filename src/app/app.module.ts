@@ -8,7 +8,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
-
+import { AuthProvider } from '../providers/auth/auth';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -28,7 +30,8 @@ import { TextToSpeech } from '@ionic-native/text-to-speech';
     StatusBar,
     SplashScreen,
     TextToSpeech,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthProvider
   ]
 })
 export class AppModule {}
