@@ -25,11 +25,7 @@ export class HomePage {
     email.on('value', snapshot => {
       this.emailStack = snapshot.val();
       let length = this.emailStack.length;
-
-      for (let i = 0; i < this.emailStack.length; i++) {
-        console.log(this.emailStack[i]);
-      }
-
+      // retrieve the last message received
       this.deliverMsgToUser(this.emailStack[length-1]);
     });
   }

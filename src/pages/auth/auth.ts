@@ -30,7 +30,7 @@ export class AuthPage {
 
   public googleLogin(): Promise<any> {
     return new Promise(function (resolve, reject) {
-      const CLIENT_ID = '242087552758-mavpac4kroqtd58arlo0jitkeorr7cud.apps.googleusercontent.com';
+      const CLIENT_ID = '242087552758-j3bb9bfigas2ggml66fbgk9vhotnq8ho.apps.googleusercontent.com';
       const url = `https://accounts.google.com/o/oauth2/auth?client_id=${CLIENT_ID}` +
         "&redirect_uri=http://localhost/callback" +
         "&scope=https://www.googleapis.com/auth/contacts.readonly" +
