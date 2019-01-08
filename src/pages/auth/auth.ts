@@ -20,7 +20,7 @@ export class AuthPage {
     this.platform.ready()
       .then(this.googleLogin)
       .then((success) => {
-        this.navCtrl.push("ContactsPage", {
+        this.navCtrl.push("HomePage", {
           token: success
         })
       }, (error) => {

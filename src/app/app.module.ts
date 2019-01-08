@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AuthPage } from '../pages/auth/auth';
 
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { AuthProvider } from '../providers/auth/auth';
@@ -14,7 +15,8 @@ import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AuthPage
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import { HttpModule } from '@angular/http';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AuthPage
   ],
   providers: [
     StatusBar,
