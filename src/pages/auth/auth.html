@@ -12,7 +12,10 @@
 
 </ion-header>
 
-<ion-content>
-<button ion-button (click)="login()">Login with Google</button>
-</ion-content>
+<ion-content padding>
+
+  <button ion-button (click)="login()" *ngIf="!userProfile">
+    <ion-icon name="logo-googleplus"></ion-icon>
+    Login with Google
+  </button>
 
